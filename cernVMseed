@@ -1,0 +1,26 @@
+[cernvm]
+# instance id
+instance-id=ams123
+# launch index
+launch-index=2
+# list of ',' seperated organisations/experiments (lowercase)
+organisations=ACE,AEGIS,ALICE,DIRAC,ATLAS
+# list of ',' seperated repositories (lowercase)
+repositories=atlas.cern.ch,cms.cern.ch
+# list of ',' separated user accounts to create <user:group:[password]>
+users=user1,user2
+# CernVM user shell </bin/bash|/bin/tcsh>
+shell=/bin/zsh
+# CVMFS HTTP proxy
+proxy=http://proxy.iiit.ac.in:8080
+# url from where to retrieve initial CernVM configuration
+config_url=http://cvmfs-stratum-one.cern.ch:8000/opt/@org@
+# list of ',' separated scripts to be executed as given user: <user>:/path/to/script.sh
+contextualization_command=user1:/tmp/init.sh
+# list of ',' seperated services to start
+services=squid, byobu
+# extra environment variables to define
+environment=temp1=1,temp2=2
+[common]
+# common environment variables both bootloader and cernVM
+environment=temp3=1,temp4=2
